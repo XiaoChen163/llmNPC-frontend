@@ -54,8 +54,6 @@ Assets/
 │   │   └── DialogueResponseDtos.cs # 响应DTO（单条/列表对话）
 │   ├── Network/               # 网络请求工具
 │   │   └── HttpDialogueService.cs  # 封装HTTP请求（async/await）
-│   ├── Cache/                 # 轻量化缓存器
-│   │   └── LightweightDialogueCache.cs # 内存级对话缓存
 │   ├── Interfaces/            # 实体接口
 │   │   ├── IMoveable.cs       # 移动接口
 │   │   └── IInteractable.cs   # 交互接口
@@ -63,8 +61,8 @@ Assets/
 │   │   └── NPCEntity.cs       # 实现移动+交互接口，控制NPC行为
 │   ├── UI/                    # 对话UI
 │   │   └── DialogueUIManager.cs # 管理对话界面（TMP_Pro）
-│   └── Utils/                   # 对话UI
-│       └── Singleton.cs # 统一单例类
+│   └── Utils/                 # 通用工具
+│       └── DialogueCache.cs   # 内存级对话缓存
 └── UI/                        # UI预制体
     └── DialogueUI.prefab      # 对话界面预制体（包含TMP输入框/文本/按钮）
 ```
