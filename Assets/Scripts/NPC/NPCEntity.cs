@@ -4,7 +4,7 @@ using UnityEngine;
 public class NPCEntity : MonoBehaviour, IMoveable, IInteractable
 {
     [Header("NPC配置")]
-    [SerializeField] private string _npcName = "星莹"; // NPC名称（与服务器一致）
+    [SerializeField] private string _npcName = ""; // NPC名称（与服务器一致）
     [SerializeField] private float _moveSpeed = 2f;
 
     [Header("UI引用")]
@@ -41,7 +41,6 @@ public class NPCEntity : MonoBehaviour, IMoveable, IInteractable
 
         // 显示对话UI，并定位到玩家附近
         _dialogueUI.ShowDialogueUI();
-        _dialogueUI.transform.position = playerTransform.position + new Vector3(0, 2f, 0); // UI显示在玩家上方
 
         // 首次交互：从缓存/服务器获取历史对话
         _dialogueUI.LoadDialogueHistory();
